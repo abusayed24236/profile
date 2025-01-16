@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Portfolio Card</title>
+    <style>
+        /* Your existing styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        .portfolio-card {
+            width: 400px;
+            background: #1c1e26;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-header {
+            height: 150px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .card-header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #1c1e26;
+            position: absolute;
+            bottom: -60px;
+        }
+
+        .card-body {
+            padding: 80px 20px 20px;
+            text-align: center;
+        }
+
+        .card-name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            color: #ff4b2b;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: #ff4b2b;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #ff6a3d;
+        }
+
+        .card-footer {
+            padding: 15px;
+            background: #1c1e26;
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+
+        .contact-btn {
+            padding: 10px 25px;
+            background: #ff416c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #ff6a3d;
+        }
+
+        .follow-btn {
+            margin-top: 10px;
+            padding: 10px 25px;
+            background: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            transition: background 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .follow-btn:hover {
+            background: #45a049;
+        }
+
+        .follow-count {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+    <script>
+        // Initialize a follower count variable
+        let followerCount = 1234; // Start with an initial count
+
+        function updateFollowerCount() {
+            followerCount++; // Increment the count
+            document.getElementById('followerCount').textContent = `Followers: ${followerCount}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="portfolio-card">
+        <div class="card-header">
+            <img src="https://via.placeholder.com/120" alt="Profile Picture">
+        </div>
+        <div class="card-body">
+            <h2 class="card-name">Abu Sayed</h2>
+            <p class="card-title">Full Stack Developer</p>
+            <p class="card-description">Building impactful websites and applications with a focus on design, functionality, and user experience. Let's create something amazing together!</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="contact-btn">Hire Me</a>
+            <button class="follow-btn" onclick="updateFollowerCount()">Follow</button>
+            <p id="followerCount" class="follow-count">Followers: 1234</p>
+        </div>
+    </div>
+</body>
+</html>
